@@ -10,6 +10,9 @@ host2.forEach(function(host){
             if (info.indexOf(' SE CAYO!!') > -1){
             console.log("\x1b[5m", "\x1b[37m", "\x1b[41m", info, "\x1b[0m");
             }
+// ______
+
+// ______
         });
     }, frequency);
 });
