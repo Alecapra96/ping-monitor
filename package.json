@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "easy-table": "^1.2.0",
     "ping": "^0.4.2"
   }
 }
