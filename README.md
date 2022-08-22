@@ -13,4 +13,6 @@ The IP and STATUS fields are essential, you can add other fields as you like.
 
 With the frequency variable you can change the time for which the machines are pinged
 A machine that has never been turned off since the script was run will appear as ONLINE without color, if it is turned off it will be red and if it is turned on again it will be green
+
+
 ![imagen](https://cdn.discordapp.com/attachments/1003694632946913403/1011294251147087953/2022-08-22_12_01_03-Window.png)
