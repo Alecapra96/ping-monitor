@@ -1,3 +1,5 @@
+![imagen](https://cdn.discordapp.com/attachments/1003694632946913403/1011317401968717908/unknown.png)
+
 A tool to monitor local IPs thanks to the node JS ping module
 
 To use this tool you will need NODE JS
@@ -17,3 +19,6 @@ A machine that has never been turned off since the script was run will appear as
 
 
 ![imagen](https://cdn.discordapp.com/attachments/1003694632946913403/1011294251147087953/2022-08-22_12_01_03-Window.png)
+
+![imagen](https://cdn.discordapp.com/attachments/1003694632946913403/1011317321668763718/2022-08-22_13_50_53-README.md_-_ping-monitor_-_Visual_Studio_Code.png)
+
