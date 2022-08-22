@@ -5,7 +5,7 @@ var host2 = [
     { ip: "192.168.12.24", desc: 'Remota FSU', status: "ONLINE"},
     { ip: "192.168.12.29", desc: 'Remota FSU', status: "ONLINE"},
     { ip: "192.168.13.118", desc: 'Certificados', status: "ONLINE"},
-    { ip: "192.168.13.120", desc: 'Certificados', tatus: "ONLINE"},
+    { ip: "192.168.13.120", desc: 'Certificados', status: "ONLINE"},
     { ip: "192.168.13.185", desc: 'Certificados', status: "ONLINE"},
     { ip: "192.168.13.155", desc: 'Faro scene', status: "ONLINE"},
     { ip: "192.168.13.126", desc: 'Remota (Falla bios)', status: "ONLINE"},
