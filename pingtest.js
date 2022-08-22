@@ -17,7 +17,7 @@ var host2 = [
     { ip: "192.168.13.121", desc: 'Remota', status: "ONLINE"},
     { ip: "192.168.13.145", desc: 'Remota externos', status: "ONLINE"},
   ]
-var frequency = 1000;
+var frequency = 10000;
 //hacer de host un array y poner la ip en {0} y el nombre de la pc en {1} ubicacion en {2}
 // console.log(host2[0].ip)
 
