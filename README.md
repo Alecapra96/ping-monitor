@@ -2,10 +2,11 @@ A tool to monitor local IPs thanks to the node JS ping module
 
 To use this tool you will need NODE JS
 
-Also the ping and easy-table modules
+Also the ping , node-banner and easy-table modules
 you can install with this commands : 
 npm i ping
 npm i easy-table
+npm i node-banner
 
 
 In the host2 object, you can put IP, description and status.
