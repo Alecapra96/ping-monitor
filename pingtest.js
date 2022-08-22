@@ -15,9 +15,10 @@ var host2 = [
     { ip: "192.168.13.100", desc: 'Remota', status: "ONLINE"},
     { ip: "192.168.12.26", desc: 'Bejerman', status: "ONLINE"},
     { ip: "192.168.13.121", desc: 'Remota', status: "ONLINE"},
-    { ip: "192.168.13.145", desc: 'Remota externos', status: "ONLINE"},
+    { ip: "192.168.12.129", desc: 'Remota externos', status: "ONLINE"},
+    { ip: "192.168.12.157", desc: 'PRUEBAS', status: "ONLINE"},
   ]
-var frequency = 10000;
+var frequency = 5000;
 //hacer de host un array y poner la ip en {0} y el nombre de la pc en {1} ubicacion en {2}
 // console.log(host2[0].ip)
 
@@ -58,7 +59,7 @@ ping.sys.probe( host.ip , function(isAlive) {
 }, frequency);
 
 });
-setInterval(reloadTable, 10000);
+setInterval(reloadTable, 5000);
 function reloadTable(){
     console.clear();
 console.log(Table.print(host2))
