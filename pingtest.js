@@ -1,5 +1,6 @@
 var ping = require('ping');
 var Table = require('easy-table');
+const nodemailer = require("nodemailer");
 const showBanner = require('node-banner');
 
 
@@ -22,8 +23,22 @@ setTimeout(() => {
 
 })();
 
+let transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: "",
+        pass: ""
+    },
+    tls: {
+        rejectUnauthorized: false,
+    },
+})
+
+
+
+
 var host2 = [
-    { ip: "192.168.12.157", Description: 'DESCRIPCION!', status: ('\x1b[32m ONLINE \x1b[0m')},
+    { ip: "XXX.XXX.XXX.XXX", Description: 'DESCRIPCION!', status: ('\x1b[32m ONLINE \x1b[0m')},
     { ip: "XXX.XXX.XXX.XXX", Description: 'DESCRIPCION!', status: ('\x1b[32m ONLINE \x1b[0m')},
     { ip: "XXX.XXX.XXX.XXX", Description: 'DESCRIPCION!', status: ('\x1b[32m ONLINE \x1b[0m')},
     { ip: "XXX.XXX.XXX.XXX", Description: 'DESCRIPCION!', status: ('\x1b[32m ONLINE \x1b[0m')},
@@ -34,6 +49,19 @@ var frequency = 5000;
 host2.forEach(function(host){ 
     let count = 0 ;
     let countConsoleOutput = 0;
+    let date_ob = new Date();
+    let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
+    let date = ("0" + date_ob.getDate()).slice(-2);
+    let hours = date_ob.getHours();
+    let minutes = date_ob.getMinutes();
+    let dateOFFLINE = ( hours + ":" + minutes + " - " + date+ "/" + month  );
+    let mailOptions = {
+        from: "",
+        to: "",
+        subject: "Im the remote " + host.ip + " and im dead :S ",
+        text: "Hi human , i died at  " + dateOFFLINE
+    }
+    
     setInterval(function() {
 ping.sys.probe( host.ip , function(isAlive) {
 
@@ -45,16 +73,20 @@ ping.sys.probe( host.ip , function(isAlive) {
         count++
         if (count === 3){
             if (countConsoleOutput < 1){
-                let date_ob = new Date();
-                let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
-                let date = ("0" + date_ob.getDate()).slice(-2);
-
-                let hours = date_ob.getHours();
-                let minutes = date_ob.getMinutes();
-                let dateOFFLINE = ( hours + ":" + minutes + " - " + date+ "/" + month  );
+               
 
 
                 host.status = ('\x1b[91m \x1b[37m \x1b[41m OFFLINE \x1b[0m') + " at "+ dateOFFLINE;
+
+                transporter.sendMail(mailOptions, function(err, succes){
+                    if(err){
+                        console.log(err)
+                    }else{
+                        console.log("Email sent succesfully");
+                    }
+                })
+
+
                 countConsoleOutput = 2;
             
             }
