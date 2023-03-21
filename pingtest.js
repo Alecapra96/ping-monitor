@@ -3,7 +3,7 @@ var Table = require('easy-table');
 const nodemailer = require("nodemailer");
 const showBanner = require('node-banner');
 
-
+//no darle bola a esto  , es un spinner 
 console.clear();
 const P = ['\\', '|', '/', '-'];
 let x = 0;
@@ -11,7 +11,7 @@ const loader = setInterval(() => {
   process.stdout.write(`\r${P[x++]}`);
   x %= P.length;
 }, 250);
-
+//pantalla de carga
 setTimeout(() => {
   clearInterval(loader);
 }, 5000);
